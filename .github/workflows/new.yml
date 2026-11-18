@@ -1,0 +1,20 @@
+#   Workflow no identation required for naming the workflow
+name: new
+
+# on tells when the workflow should run
+on:
+  workflow_dispatch:
+
+
+# Job tells what the workflow should do, there can be one or mre than one jobs, hence we write Jobs branch_protection_rule: branch_protection_rule: branch_protection_rule: 
+# Jobs is an object so needs identation
+jobs:
+# 1st Job (give identation)
+  say-new:      
+  # Create an Ephermal Container with Ubuntu latest
+    runs-on: ubuntu-latest
+    # That ephermal container will have stepsto execute, hence name those steps and use run: run has the command
+    steps:
+      - name: Say hello to everyone
+        run: echo "Hello World"
+
